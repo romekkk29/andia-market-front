@@ -27,7 +27,7 @@ async function getUserT(){
 async function getProducts(){
   try {
     const response = await fetch(
-      `http://127.0.0.1:3010/products`,
+      `http://34.176.143.201:3010/products`,
       {
         method: "GET",
         headers: {
@@ -704,7 +704,7 @@ window.iniciarLoginGoogle2 = function () {
 async function getUser(email) {
   try {
     const response = await fetch(
-      `http://127.0.0.1:3010/user/${email}`,
+      `http://34.176.143.201:3010/user/${email}`,
       {
         method: "GET",
         headers: {
@@ -731,7 +731,7 @@ async function getUser(email) {
 async function postPedido(payload) {
   try {
     const response = await fetch(
-      `http://127.0.0.1:3010/pedido/`,
+      `http://34.176.143.201:3010/pedido/`,
       {
         method: "POST",
         body: JSON.stringify(payload),
@@ -758,7 +758,7 @@ async function postPedido(payload) {
 async function listarPedidos() {
   try {
     const response = await fetch(
-      `http://127.0.0.1:3010/pedido/${usuarioLogueado.email}`,
+      `http://34.176.143.201:3010/pedido/${usuarioLogueado.email}`,
       {
         method: "GET",
         headers: {
@@ -896,7 +896,7 @@ window.confirmarPedidoFinal = async function() {
  
 async function guardarUsuarioEnBD(usuario) {
      try {
-        await fetch('http://127.0.0.1:3010/create-user', {
+        await fetch('http://34.176.143.201:3010/create-user', {
             method: 'POST',
             body: JSON.stringify(usuario),
             headers: {'Content-Type': 'application/json'}

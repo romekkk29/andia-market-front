@@ -6,7 +6,7 @@ let pedidos = [];
 async function getPedidos(){
   try {
     const response = await fetch(
-      `http://127.0.0.1:3010/pedidosA`,
+      `http://34.176.143.201:3010/pedidosA`,
       {
         method: "GET",
         headers: {
@@ -121,7 +121,7 @@ window.renderizarPedidos = function() {
 };
 window.cambiarEstado = async function(id, nuevoEstado) {
     try {
-        await fetch(`http://127.0.0.1:3010/api/pedidos/${id}/status`, {
+        await fetch(`http://34.176.143.201:3010/api/pedidos/${id}/status`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
