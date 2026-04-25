@@ -903,7 +903,6 @@ async function guardarUsuarioEnBD(usuario) {
         });
     } catch (error) {
         console.error("Error al guardar en BD", error);
-    
     } 
 }
 
