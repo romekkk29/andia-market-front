@@ -27,7 +27,7 @@ async function getUserT(){
 async function getProducts(){
   try {
     const response = await fetch(
-      `http://34.176.143.201:3010/products`,
+      `https://andiamarket.com/api/products`,
       {
         method: "GET",
         headers: {
@@ -704,7 +704,7 @@ window.iniciarLoginGoogle2 = function () {
 async function getUser(email) {
   try {
     const response = await fetch(
-      `http://34.176.143.201:3010/user/${email}`,
+      `https://andiamarket.com/api/user/${email}`,
       {
         method: "GET",
         headers: {
@@ -731,7 +731,7 @@ async function getUser(email) {
 async function postPedido(payload) {
   try {
     const response = await fetch(
-      `http://34.176.143.201:3010/pedido/`,
+      `https://andiamarket.com/api/pedido/`,
       {
         method: "POST",
         body: JSON.stringify(payload),
@@ -758,7 +758,7 @@ async function postPedido(payload) {
 async function listarPedidos() {
   try {
     const response = await fetch(
-      `http://34.176.143.201:3010/pedido/${usuarioLogueado.email}`,
+      `https://andiamarket.com/api/pedido/${usuarioLogueado.email}`,
       {
         method: "GET",
         headers: {
@@ -896,7 +896,7 @@ window.confirmarPedidoFinal = async function() {
  
 async function guardarUsuarioEnBD(usuario) {
      try {
-        await fetch('http://34.176.143.201:3010/create-user', {
+        await fetch('https://andiamarket.com/api/create-user', {
             method: 'POST',
             body: JSON.stringify(usuario),
             headers: {'Content-Type': 'application/json'}
